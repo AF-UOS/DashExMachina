@@ -17,8 +17,8 @@ public class RobotTestScriptFree : MonoBehaviour {
 	
 		//Controls the Input for running animations
 		// 1: walk
-		//2: Run
-		//3: Jump
+		// 2: Run
+		// 3: Jump
 			
 		if(Input.GetKey("2")) anim.SetInteger("Speed", 2);
 			else if(Input.GetKey("1")) anim.SetInteger("Speed", 1);
