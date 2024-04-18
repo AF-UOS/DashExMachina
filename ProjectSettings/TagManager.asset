@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SF_Door
   - Ground
+  - Time
   layers:
   - Default
   - TransparentFX

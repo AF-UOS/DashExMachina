@@ -12,12 +12,12 @@ public class TimeDisplay : MonoBehaviour
 
     void Start()
     {
-        //Pass in time values
-        float time1val = 5F;
-        float time2val = 7F;
+        GameObject go = GameObject.FindWithTag("Time");
+        float time1val = go.GetComponent<Timer>().time1val;
+        float time2val = go.GetComponent<Timer>().time2val;
         float totalval = time1val + time2val;
-        Time1.text = time1val.ToString();
-        Time2.text = time2val.ToString();
-        Total.text = totalval.ToString();
+        Time1.text = time1val.ToString("00.00");
+        Time2.text = time2val.ToString("00.00");
+        Total.text = totalval.ToString("00.00");
     }
 }
