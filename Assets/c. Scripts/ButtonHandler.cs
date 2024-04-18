@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class ButtonHandler : MonoBehaviour 
@@ -20,6 +21,8 @@ public class ButtonHandler : MonoBehaviour
 
     void SpawnObjects() 
     {
+        Shuffle(spawnPoints); //Shuffle the Spawnpoints
+
         while (totalSpawnedCount < maxTotalSpawnCount)
         { 
             foreach (Transform spawnPoint in spawnPoints) 
@@ -53,14 +56,25 @@ public class ButtonHandler : MonoBehaviour
         }
     }
 
-    void Shuffle(GameObject[] array) 
+    void Shuffle<T>(T[] array)
     { 
-        for(int i = array.Length -1; i>0; i--) 
+        for (int i = array.Length - 1; i > 0; i--) 
         {
             int randomIndex = Random.Range(0, i + 1);
-            GameObject temp = array[i];
+            T temp = array[i];
             array[i] = array[randomIndex];
             array[randomIndex] = temp;
-        }    
+        }
     }
 }
+
+//To use this script:
+//    1. Attach this script to an Empty GameObject in your setting, this can be outside the map, inside an object, doesnt matter. You just need to be able to access it.
+//    2. Place your "SpawnPoints" within your scene, name them "Spawnpoint01", "Spawnpoint02", etc, etc. Until you have your desired amount. You MUST have 3 spawnpoints minimum.
+//    3. Click on your GameObject that has this script attached, ensure you have a minimum of 3 buttons in the "Objects To Spawn" dropdown menu. You can drag and drop the Button Prefab from the assets folder into the box.
+//    4. Drag and drop your spawnpoints from the Unity Hierarchy, (The left side where all the objects are), into the drop down labled "Spawn Points" within the Inspector (The right side where all the info for the object with the script is)
+//    5. Test, tweak, and adjust to your preffered settings for your level!
+//    6. Done, Script Impleneted Successfully!
+
+//    Love from Sonny xo
+
