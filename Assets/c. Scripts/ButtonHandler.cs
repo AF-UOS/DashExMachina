@@ -5,10 +5,13 @@ using UnityEngine;
 public class ButtonHandler : MonoBehaviour 
 {
 
-    public GameObject[] objectsToSpawn; //Array of objects to spawn, this will be the Buttons
-    public Transform[] spawnPoints; //Array of spawnpoints, this will be where the Buttons spawn
-    public int maxSpawnCount = 3; //Maximum Number of objects to spawn at each point.
+    public GameObject[] objectsToSpawn; //Place Buttons here in the Unity Inspector
+    public Transform[] spawnPoints; //Place Spawnpoints here in the Unity Inspector
+    public int maxSpawnCountPerPoint = 1; //Maximum Number of Buttons on Individual Spawnpoints
+    public int maxTotalSpawnCount = 3; //Total Number of Buttons that can Spawn
+    private int totalSpawnedCount = 0; //Tracks the amount of spawned Buttons
     private int i;
+    private List<Transform> usedSpawnPoints = new List<Transform>(); //Tracks which Spawnpoints have been used, prevents them being used twice
 
     void Start() 
     {
@@ -17,14 +20,36 @@ public class ButtonHandler : MonoBehaviour
 
     void SpawnObjects() 
     {
-        foreach (Transform spawnpoint in spawnPoints)
-        {
-            Shuffle(objectsToSpawn); //Shuffles the Buttons for Random Selection
+        while (totalSpawnedCount < maxTotalSpawnCount)
+        { 
+            foreach (Transform spawnPoint in spawnPoints) 
+            { 
+                if (!usedSpawnPoints.Contains(spawnPoint)) 
+                //Check if a Spawnpoint has been Used
+                {
+                    Shuffle(objectsToSpawn);
+                    //Shuffle the GameObjects to Randomize Selection
 
-            for (int i = 0; i < Mathf.Min(maxSpawnCount, objectsToSpawn.Length); i++) //Spawn up to the Maximum Number of Objects
-            {
-                Instantiate(objectsToSpawn[i], spawnpoint.position, Quaternion.identity); ///Spawn the desired object
-            }           
+                    int objectsToSpawnCount = Mathf.Min(maxSpawnCountPerPoint, objectsToSpawn.Length);
+
+                    for (int i = 0; i < objectsToSpawnCount; i++) 
+                    {
+                        if (totalSpawnedCount >= maxTotalSpawnCount)
+                        //Checks if we have reached the Maximum Total Spawned
+                            break;
+
+                        Instantiate(objectsToSpawn[i], spawnPoint.position, Quaternion.identity);
+                        totalSpawnedCount++;
+                    }
+
+                usedSpawnPoints.Add(spawnPoint);
+                    //Mark the Spawnpoint as Used
+
+                if (totalSpawnedCount >= maxTotalSpawnCount)
+                        break;
+
+                }
+            }
         }
     }
 
