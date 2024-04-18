@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Menu, End screens test/Game.unity
     guid: 93bc0ded916e476439964e2b033d4578
+  - enabled: 1
+    path: Assets/Menu, End screens test/End.unity
+    guid: 76fe25739ed0c18409ea211528f63688
   m_configObjects: {}
