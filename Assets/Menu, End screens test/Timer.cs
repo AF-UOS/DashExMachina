@@ -18,6 +18,7 @@ public class Timer : MonoBehaviour
     }
     void FixedUpdate()
     {
+        //if statement for testing purposes, will use room value in a later version
         if (time1val < 2)
         {
             time1val += 0.01f;
@@ -34,5 +35,3 @@ public class Timer : MonoBehaviour
         }
     }
 }
-
-//Use another script to change room value
