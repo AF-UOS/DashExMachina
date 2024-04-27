@@ -6,9 +6,9 @@ using TMPro;
 
 public class TimeDisplay : MonoBehaviour
 {
-    public TMP_Text Time1;
-    public TMP_Text Time2;
-    public TMP_Text Total;
+    public TMP_Text time1;
+    public TMP_Text time2;
+    public TMP_Text total;
 
     void Start()
     {
@@ -20,8 +20,8 @@ public class TimeDisplay : MonoBehaviour
         float time2val = go.GetComponent<Timer>().time2val;
 
         float totalval = time1val + time2val;
-        Time1.text = time1val.ToString("00.00");
-        Time2.text = time2val.ToString("00.00");
-        Total.text = totalval.ToString("00.00");
+        time1.text = time1val.ToString("00.00");
+        time2.text = time2val.ToString("00.00");
+        total.text = totalval.ToString("00.00");
     }
 }
