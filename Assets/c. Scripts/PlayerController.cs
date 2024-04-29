@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private bool isSprinting = false;
     private float sprintTimer = 0f;
     private float cooldownTimer = 0f;
+    float camera;
 
     void Start()
     {
@@ -25,13 +26,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        camera += Input.GetAxis("Mouse X");
         // Check if the player is grounded
         if (characterController.isGrounded)
         {
             // Calculate movement direction based on player input
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
-            moveDirection = transform.TransformDirection(new Vector3(horizontalInput, 0f, verticalInput));
+            moveDirection = transform.TransformDirection(new Vector3((horizontalInput * Mathf.Cos(camera)) + (verticalInput * Mathf.Sin(camera)), 0f, (verticalInput * Mathf.Sin(camera)) + (horizontalInput * Mathf.Cos(camera))));
 
             // Apply speed based on whether sprinting or not
             float currentSpeed = isSprinting ? sprintSpeed : speed;
