@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private bool isSprinting = false;
     private float sprintTimer = 0f;
     private float cooldownTimer = 0f;
-    float camera;
+    static float camera;
 
     void Start()
     {
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
             // Calculate movement direction based on player input
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
-            moveDirection = transform.TransformDirection(new Vector3((horizontalInput * Mathf.Cos(camera)) + (verticalInput * Mathf.Sin(camera)), 0f, (verticalInput * Mathf.Sin(camera)) + (horizontalInput * Mathf.Cos(camera))));
+            moveDirection = transform.TransformDirection(new Vector3((horizontalInput * Mathf.Cos(-camera * (Mathf.PI / 180))) + (verticalInput * Mathf.Sin(camera * (Mathf.PI / 180))), 0f, (verticalInput * Mathf.Cos(camera * (Mathf.PI / 180))) + (horizontalInput * Mathf.Sin(-camera * (Mathf.PI / 180)))));
 
             // Apply speed based on whether sprinting or not
             float currentSpeed = isSprinting ? sprintSpeed : speed;
