@@ -25,7 +25,7 @@ public class Door : MonoBehaviour
             if (script1.remaining == 0)
             {
                 //Load next room
-                SceneManager.LoadScene("TEST.Coding");
+                SceneManager.LoadScene("ClearScene");
                 script1.Reset();
                 script2.Reset();
             }

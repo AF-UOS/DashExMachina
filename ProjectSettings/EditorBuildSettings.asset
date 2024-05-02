@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Menu, End screens test/Game.unity
     guid: 8931b52fda3e5f842b12f748554c7328
   - enabled: 1
-    path: Assets/Menu, End screens test/End.unity
+    path: Assets/a. Scenes/ClearScene.unity
     guid: 76fe25739ed0c18409ea211528f63688
   m_configObjects: {}
