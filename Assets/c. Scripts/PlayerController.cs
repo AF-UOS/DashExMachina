@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        camera += Input.GetAxis("Mouse X");
+        camera += Input.GetAxis("Mouse X") * 2;
         // Check if the player is grounded
         if (characterController.isGrounded)
         {
@@ -88,5 +88,10 @@ public class PlayerController : MonoBehaviour
         isSprinting = false;
         cooldownTimer = sprintCooldown - sprintTimer;
         sprintTimer = 0f;
+    }
+
+    public void Reset()
+    {
+        camera = 0;
     }
 }

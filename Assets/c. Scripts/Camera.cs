@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
+    static float input;
+
     void Update()
     {
-        float input = Input.GetAxis("Mouse X");
-        Debug.Log(input);
+        input = Input.GetAxis("Mouse X") * 2;
         transform.Rotate(0, input, 0);
     }
 }
