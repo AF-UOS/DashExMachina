@@ -230,7 +230,7 @@ MonoBehaviour:
   sprintSpeed: 10
   sprintDuration: 2.5
   sprintCooldown: 3
-  jumpForce: 7.5
+  jumpForce: 15
   gravity: 19
 --- !u!143 &4856959118439737844
 CharacterController:
