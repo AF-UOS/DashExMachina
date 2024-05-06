@@ -6,12 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Menu, End screens test/Menu.unity
-    guid: 5d1bae6ba4fa4cf4792d1692cad510a7
-  - enabled: 1
-    path: Assets/Menu, End screens test/Game.unity
-    guid: 8931b52fda3e5f842b12f748554c7328
+    path: Assets/a. Scenes/ValueScene.unity
+    guid: e6b49488f06b17d4c8754aa605824222
   - enabled: 1
     path: Assets/a. Scenes/TitleScreens/TitleScene.unity
     guid: 76fe25739ed0c18409ea211528f63688
+  - enabled: 1
+    path: Assets/a. Scenes/Levels/L_00_Tutorial.unity
+    guid: 184189996f81b624da7483e136a4b306
+  - enabled: 1
+    path: Assets/a. Scenes/Levels/L_01_Intro.unity
+    guid: 1cd2f305a2a6d29438f9478526dfe0e2
+  - enabled: 1
+    path: Assets/a. Scenes/Levels/L_02_Intro.unity
+    guid: def8f7a74e034aa4fb438ca0aa028220
+  - enabled: 1
+    path: Assets/a. Scenes/Levels/L_03_Intro.unity
+    guid: ddc7539677c7d154ba7d995976dff598
+  - enabled: 1
+    path: Assets/a. Scenes/Levels/L_04_StaticHaz.unity
+    guid: 6257971c44cb41f47ad74b57d6c7ce91
+  - enabled: 1
+    path: Assets/a. Scenes/Levels/L_05_StaticHaz.unity
+    guid: 5cc616ba5f94ac7498a5651d0be3cccf
+  - enabled: 1
+    path: Assets/a. Scenes/Levels/L_06_MoveHaz.unity
+    guid: 2168abe68921f114f9c8446db8200983
+  - enabled: 1
+    path: Assets/a. Scenes/Levels/L_07_MoveHaz.unity
+    guid: d8fa7ac93604e7b47bbd41c7295653e5
+  - enabled: 1
+    path: Assets/a. Scenes/Levels/L_08_MoveHaz.unity
+    guid: b449dc3a42dbf524fa26158584aad496
   m_configObjects: {}
