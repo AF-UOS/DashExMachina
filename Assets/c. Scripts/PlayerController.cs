@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        camera = 0;
     }
 
     void Update()

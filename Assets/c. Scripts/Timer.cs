@@ -23,4 +23,9 @@ public class Timer : MonoBehaviour
         Time.text = "Time: " + time.ToString("00.00");
         script.time = time;
     }
+
+    void Reset()
+    {
+        time = script.time;
+    }
 }

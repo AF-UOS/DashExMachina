@@ -67,8 +67,6 @@ public class Door : MonoBehaviour
                     roomName = "L_08_MovHazard";
                 }
                 SceneManager.LoadScene("ClearScene", LoadSceneMode.Additive);
-                script1.Reset();
-                script2.Reset();
                 SceneManager.UnloadSceneAsync(roomName);
             }
         }
