@@ -14,7 +14,7 @@ public class TimeDisplay : MonoBehaviour
         GameObject go = GameObject.Find("GameObject");
         script = go.GetComponent<ValueHandler>();
         float time = script.time;
-        Time.text = time.ToString("00.00");
+        Time.text = time.ToString("00.00.00");
         script.time = 0;
     }
 }

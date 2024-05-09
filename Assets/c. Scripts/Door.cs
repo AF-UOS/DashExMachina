@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    private Remaining script1;
+    private ButtonCounter script1;
     private PlayerController script2;
     private ValueHandler script3;
     int room;
@@ -14,8 +14,7 @@ public class Door : MonoBehaviour
     void Start()
     {
         GameObject remaining = GameObject.Find("Counter 2");
-        script1 = remaining.GetComponent<Remaining>();
-        script1.Reset();
+        script1 = remaining.GetComponent<ButtonCounter>();
         GameObject controller = GameObject.Find("PlayerTest");
         script2 = controller.GetComponent<PlayerController>();
         GameObject go = GameObject.Find("GameObject");
@@ -27,7 +26,7 @@ public class Door : MonoBehaviour
     {
         if (c.gameObject.tag == "Player")
         {
-            if (script1.remaining == 0)
+            if (script1.num == script1.max)
             {
                 room = script3.room;
                 if (room == 0)

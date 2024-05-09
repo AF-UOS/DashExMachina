@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
     void FixedUpdate()
     {
         time += 0.01f;
-        Time.text = "Time: " + time.ToString("00.00");
+        Time.text = "Time: " + time.ToString("00.00.00");
         script.Add(time);
     }
 }

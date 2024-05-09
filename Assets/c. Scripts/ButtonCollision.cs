@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class ButtonCollision : MonoBehaviour
 {
-
-    private Total script1;
-    private Remaining script2;
+    private ButtonCounter script;
     int active = 1;
 
     void Start()
     {
-        GameObject total = GameObject.Find("Counter 1");
-        script1 = total.GetComponent<Total>();
-        GameObject remaining = GameObject.Find("Counter 2");
-        script2 = remaining.GetComponent<Remaining>();
+        GameObject total = GameObject.Find("Button Counter");
+        script = total.GetComponent<ButtonCounter>();
     }
 
     void OnTriggerEnter(Collider c)
@@ -23,8 +19,7 @@ public class ButtonCollision : MonoBehaviour
         {
             if (active == 1)
             {
-                script1.Press();
-                script2.Press();
+                script.Press();
                 active = 0;
             }
         }
