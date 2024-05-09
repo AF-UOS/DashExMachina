@@ -23,9 +23,9 @@ public class Door : MonoBehaviour
     }
 
     //Need to adjust collision
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider c)
     {
-        if (collision.gameObject.tag == "Player")
+        if (c.gameObject.tag == "Player")
         {
             if (script1.remaining == 0)
             {

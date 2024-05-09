@@ -7,7 +7,7 @@ public class Quit : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Escape))
         {
             SceneManager.LoadScene("TitleScene", LoadSceneMode.Additive);
             SceneManager.UnloadSceneAsync("ClearScene");

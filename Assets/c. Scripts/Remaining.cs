@@ -7,7 +7,7 @@ public class Remaining : MonoBehaviour
 {
     public TMP_Text counter;
     //Value is set to max on room change
-    public int max = 5;
+    public int max = 1;
     public int remaining = 0;
 
     //Called on room change, potentially also death to a hazard

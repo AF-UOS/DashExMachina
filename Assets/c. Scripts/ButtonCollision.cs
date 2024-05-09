@@ -17,9 +17,9 @@ public class ButtonCollision : MonoBehaviour
         script2 = remaining.GetComponent<Remaining>();
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider c)
     {
-        if (collision.gameObject.tag == "Player")
+        if (c.gameObject.tag == "Player")
         {
             if (active == 1)
             {

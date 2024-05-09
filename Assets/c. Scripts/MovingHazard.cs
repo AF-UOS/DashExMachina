@@ -5,23 +5,17 @@ using UnityEngine;
 public class MovingHazard : MonoBehaviour
 {
     public Transform[] waypoints;
-    static int length;
     int i = 0;
-
-    void Start()
-    {
-        int length = waypoints.Length;
-    }
 
     void FixedUpdate()
     {
-        if (Vector3.Distance(transform.position, waypoints[i].position) < 1)
+        if (transform.position != waypoints[i].position)
         {
-            transform.position = Vector3.MoveTowards(transform.position, waypoints[i].position, Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, waypoints[i].position, 3 * Time.deltaTime);
         }
         else
         {
-            if (i == length - 1)
+            if (i == waypoints.Length - 1)
             {
                 i = 0;
             }

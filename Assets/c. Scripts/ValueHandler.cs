@@ -55,4 +55,9 @@ public class ValueHandler : MonoBehaviour
         SceneManager.UnloadSceneAsync(roomName);
         SceneManager.LoadScene(roomName, LoadSceneMode.Additive);
     }
+
+    public void Add(float x)
+    {
+        time = x;
+    }
 }

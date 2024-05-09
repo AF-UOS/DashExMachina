@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Play : MonoBehaviour
+public class Select1 : MonoBehaviour
 {
     private ValueHandler script;
 
@@ -15,8 +15,8 @@ public class Play : MonoBehaviour
 
     public void Button()
     {
-        script.room = 0;
-        SceneManager.LoadScene("L_00_Tutorial", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("TitleScene");
+        script.room = 1;
+        SceneManager.LoadScene("L_01_Intro", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("LevelSelect");
     }
 }

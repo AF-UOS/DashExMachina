@@ -7,13 +7,14 @@ using TMPro;
 public class TimeDisplay : MonoBehaviour
 {
     private ValueHandler script;
-    public TMP_Text time;
+    public TMP_Text Time;
 
     void Start()
     {
         GameObject go = GameObject.Find("GameObject");
         script = go.GetComponent<ValueHandler>();
-        float timeval = script.time;
-        time.text = timeval.ToString("00.00");
+        float time = script.time;
+        Time.text = time.ToString("00.00");
+        script.time = 0;
     }
 }
