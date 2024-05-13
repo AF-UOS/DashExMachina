@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class ValueHandler : MonoBehaviour
 {
     public int room = 0;
-    public float time;
+    public int time;
+    public int seconds;
+    public int minutes;
     string roomName;
 
     void Start()
@@ -56,8 +58,10 @@ public class ValueHandler : MonoBehaviour
         SceneManager.LoadScene(roomName, LoadSceneMode.Additive);
     }
 
-    public void Add(float x)
+    public void Add(int x, int y, int z)
     {
         time = x;
+        seconds = y;
+        minutes = z;
     }
 }

@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Select4 : MonoBehaviour
+public class Select : MonoBehaviour
 {
     private ValueHandler script;
+    public string room;
 
     private void Start()
     {
@@ -15,8 +16,8 @@ public class Select4 : MonoBehaviour
 
     public void Button()
     {
-        script.room = 4;
-        SceneManager.LoadScene("L_04_StaticHaz", LoadSceneMode.Additive);
+        script.room = 1;
+        SceneManager.LoadScene(room, LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("LevelSelect");
     }
 }

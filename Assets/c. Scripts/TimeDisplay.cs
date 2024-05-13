@@ -13,8 +13,12 @@ public class TimeDisplay : MonoBehaviour
     {
         GameObject go = GameObject.Find("GameObject");
         script = go.GetComponent<ValueHandler>();
-        float time = script.time;
-        Time.text = time.ToString("00.00.00");
+        int time = script.time;
+        int seconds = script.seconds;
+        int minutes = script.minutes;
+        Time.text = minutes.ToString() + ":" + seconds.ToString() + ":" + time.ToString();
         script.time = 0;
+        script.seconds = 0;
+        script.minutes = 0;
     }
 }

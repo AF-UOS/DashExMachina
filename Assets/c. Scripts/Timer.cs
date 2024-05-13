@@ -9,7 +9,9 @@ public class Timer : MonoBehaviour
 {
     private ValueHandler script;
     public TMP_Text Time;
-    public float time;
+    public int time;
+    public int seconds;
+    public int minutes;
 
     void Start()
     {
@@ -20,8 +22,18 @@ public class Timer : MonoBehaviour
 
     void FixedUpdate()
     {
-        time += 0.01f;
-        Time.text = "Time: " + time.ToString("00.00.00");
-        script.Add(time);
+        time += 1;
+        if (time == 100)
+        {
+            seconds++;
+            time = 0;
+        }
+        if (time == 60)
+        {
+            minutes++;
+            seconds = 0;
+        }
+        Time.text = minutes.ToString() + ":" + seconds.ToString() + ":" + time.ToString();
+        script.Add(time, seconds, minutes);
     }
 }
