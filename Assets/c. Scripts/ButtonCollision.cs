@@ -20,6 +20,7 @@ public class ButtonCollision : MonoBehaviour
             if (active == 1)
             {
                 script.Press();
+                transform.Translate(0, -0.25f, 0);
                 active = 0;
             }
         }

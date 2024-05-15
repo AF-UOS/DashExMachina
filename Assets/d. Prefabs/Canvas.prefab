@@ -1017,6 +1017,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Time: {fileID: 6018042066543107493}
   time: 0
+  seconds: 0
+  minutes: 0
 --- !u!1 &9192303775852763647
 GameObject:
   m_ObjectHideFlags: 0
