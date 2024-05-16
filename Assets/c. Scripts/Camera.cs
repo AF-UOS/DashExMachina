@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    static float input;
-
+    static float inputX;
+    static float inputY;
     void Start()
     {
-        input = 0;
+        inputX = 0;
+        inputY = 0;
     }
 
     void Update()
     {
-        input = Input.GetAxis("Mouse X") * 2;
-        transform.Rotate(0, input, 0);
+        inputX = Input.GetAxis("Mouse X") * 2;
+        inputY = Input.GetAxis("Mouse Y") * 2;
+        //transform.rotation = Quaternion.Euler(inputY, inputX, 0);
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x + -inputY, transform.eulerAngles.y + inputX, 0);
+        //Mathf.Clamp() // research this
+        //transform.Rotate(rotationVector);
     }
 }
