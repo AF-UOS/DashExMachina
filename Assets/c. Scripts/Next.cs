@@ -25,31 +25,31 @@ public class Next : MonoBehaviour
             }
             if (room == 1)
             {
-                newRoom = "L_02_Intro";
+                newRoom = "L_02_bend";
             }
             if (room == 2)
             {
-                newRoom = "L_03_Intro";
+                newRoom = "L_03_fork";
             }
             if (room == 3)
             {
-                newRoom = "L_04_StaticHaz";
+                newRoom = "L_04_square";
             }
             if (room == 4)
             {
-                newRoom = "L_05_StaticHazard";
+                newRoom = "L_05_hole";
             }
             if (room == 5)
             {
-                newRoom = "L_06_MovHazard";
+                newRoom = "L_06_circle";
             }
             if (room == 6)
             {
-                newRoom = "L_07_MovHazard";
+                newRoom = "L_07_saws";
             }
             if (room == 7)
             {
-                newRoom = "L_08_MovHazard";
+                newRoom = "L_08_bowtie";
             }
             SceneManager.LoadScene(newRoom, LoadSceneMode.Additive);
             script.room += 1;
@@ -66,31 +66,31 @@ public class Next : MonoBehaviour
         }
         if (room == 1)
         {
-            newRoom = "L_02_Intro";
+            newRoom = "L_02_bend";
         }
         if (room == 2)
         {
-            newRoom = "L_03_Intro";
+            newRoom = "L_03_fork";
         }
         if (room == 3)
         {
-            newRoom = "L_04_StaticHaz";
+            newRoom = "L_04_square";
         }
         if (room == 4)
         {
-            newRoom = "L_05_StaticHazard";
+            newRoom = "L_05_hole";
         }
         if (room == 5)
         {
-            newRoom = "L_06_MovHazard";
+            newRoom = "L_06_circle";
         }
         if (room == 6)
         {
-            newRoom = "L_07_MovHazard";
+            newRoom = "L_07_saws";
         }
         if (room == 7)
         {
-            newRoom = "L_08_MovHazard";
+            newRoom = "L_08_bowtie";
         }
         SceneManager.LoadScene(newRoom, LoadSceneMode.Additive);
         script.room += 1;

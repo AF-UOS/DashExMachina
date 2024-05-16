@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/a. Scenes/Levels/L_04_square.unity
     guid: 6257971c44cb41f47ad74b57d6c7ce91
   - enabled: 1
-    path: Assets/a. Scenes/Levels/L_05_StaticHaz.unity
+    path: Assets/a. Scenes/Levels/L_05_hole.unity
     guid: 5cc616ba5f94ac7498a5651d0be3cccf
   - enabled: 1
     path: Assets/a. Scenes/Levels/L_06_circle.unity

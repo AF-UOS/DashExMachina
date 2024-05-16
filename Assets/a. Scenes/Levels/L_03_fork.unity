@@ -1478,7 +1478,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4856959118069118821, guid: d8f9e4ad04cf607438e030abacb3a848, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d8f9e4ad04cf607438e030abacb3a848, type: 3}
 --- !u!1001 &822949122
 PrefabInstance:
@@ -3316,6 +3317,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6018042065714109619, guid: 66ecb2e90a8434e448d386d622b88344, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 48.69995
+      objectReference: {fileID: 0}
     - target: {fileID: 6018042066453124337, guid: 66ecb2e90a8434e448d386d622b88344, type: 3}
       propertyPath: m_Name
       value: Canvas

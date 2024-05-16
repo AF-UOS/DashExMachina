@@ -30,31 +30,31 @@ public class Door : MonoBehaviour
             }
             if (room == 2)
             {
-                roomName = "L_02_Intro";
+                roomName = "L_02_bend";
             }
             if (room == 3)
             {
-                roomName = "L_03_Intro";
+                roomName = "L_03_fork";
             }
             if (room == 4)
             {
-                roomName = "L_04_StaticHaz";
+                roomName = "L_04_square";
             }
             if (room == 5)
             {
-                roomName = "L_05_StaticHazard";
+                roomName = "L_05_hole";
             }
             if (room == 6)
             {
-                roomName = "L_06_MovHazard";
+                roomName = "L_06_circle";
             }
             if (room == 7)
             {
-                roomName = "L_07_MovHazard";
+                roomName = "L_07_saws";
             }
             if (room == 8)
             {
-                roomName = "L_08_MovHazard";
+                roomName = "L_08_bowtie";
             }
             SceneManager.LoadScene("ClearScene", LoadSceneMode.Additive);
             SceneManager.UnloadSceneAsync(roomName);
