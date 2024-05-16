@@ -285,6 +285,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2670690558916262842, guid: d8f9e4ad04cf607438e030abacb3a848, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2670690558916262842, guid: d8f9e4ad04cf607438e030abacb3a848, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2670690558916262842, guid: d8f9e4ad04cf607438e030abacb3a848, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4856959118439737836, guid: d8f9e4ad04cf607438e030abacb3a848, type: 3}
       propertyPath: m_Name
       value: PlayerTest
