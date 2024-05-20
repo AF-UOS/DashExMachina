@@ -14,9 +14,9 @@ public class Hazard : MonoBehaviour
         script1 = go.GetComponent<ValueHandler>();
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider c)
     {
-        if (collision.gameObject.tag == "Player")
+        if (c.gameObject.tag == "Player")
         {
             script1.Reset();
         }
