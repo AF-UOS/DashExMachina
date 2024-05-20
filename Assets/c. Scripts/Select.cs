@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Select : MonoBehaviour
 {
     private ValueHandler script;
-    public string room;
+    public int room;
 
     private void Start()
     {
@@ -16,7 +16,7 @@ public class Select : MonoBehaviour
 
     public void Button()
     {
-        script.room = 1;
+        script.room = room;
         SceneManager.LoadScene(room, LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("LevelSelect");
     }

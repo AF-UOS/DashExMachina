@@ -151,7 +151,7 @@ MonoBehaviour:
   sprintSpeed: 10
   sprintDuration: 2.5
   sprintCooldown: 3
-  jumpForce: 7
+  jumpForce: 15
   gravity: 20
 --- !u!1 &5264846280065188078
 GameObject:
