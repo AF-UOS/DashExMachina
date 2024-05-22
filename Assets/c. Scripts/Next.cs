@@ -19,7 +19,7 @@ public class Next : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             int room = script.room;
-            if (room == 0)
+            if (room == 0 || room == 8)
             {
                 newRoom = "L_01_Intro";
             }
@@ -50,6 +50,11 @@ public class Next : MonoBehaviour
             if (room == 7)
             {
                 newRoom = "L_08_bowtie";
+            }
+            if (room == 8)
+            {
+                newRoom = "TitleScene";
+                room = -1;
             }
             SceneManager.LoadScene(newRoom, LoadSceneMode.Additive);
             script.room += 1;
