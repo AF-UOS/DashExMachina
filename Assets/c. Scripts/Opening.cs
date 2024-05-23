@@ -16,28 +16,28 @@ public class Opening : MonoBehaviour
         if (transform.eulerAngles.y == 0 || transform.eulerAngles.y == 180)
         {
             origin = transform.position.x;
-            if (transform.eulerAngles.y == 180)
-            {
-                direction = direction;
-            }
         }
         else if (transform.eulerAngles.y  == 90 || transform.eulerAngles.y == 270)
         {
             origin = transform.position.z;
-            if (transform.eulerAngles.y == 90)
-            {
-                direction = direction;
-            }
         }
     }
 
     void FixedUpdate()
     {
-        if (transform.eulerAngles.y == 0 || transform.eulerAngles.y == 180)
+        if (transform.eulerAngles.y == 0)
         {
             distance = ((transform.position.x - origin) * direction);
         }
-        else if (transform.eulerAngles.y == 90 || transform.eulerAngles.y == 270)
+        else if (transform.eulerAngles.y == 90)
+        {
+            distance = ((transform.position.z - origin) * -direction);
+        }
+        else if (transform.eulerAngles.y == 180)
+        {
+            distance = ((transform.position.x - origin) * -direction);
+        }
+        else if (transform.eulerAngles.y == 270)
         {
             distance = ((transform.position.z - origin) * direction);
         }
