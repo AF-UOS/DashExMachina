@@ -18,6 +18,8 @@ public class Timer : MonoBehaviour
         GameObject go = GameObject.Find("GameObject");
         script = go.GetComponent<ValueHandler>();
         time = script.time;
+        seconds = script.seconds;
+        minutes = script.minutes;
     }
 
     void FixedUpdate()
