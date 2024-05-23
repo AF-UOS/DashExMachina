@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     //public float sprintSpeed = 10f; // Speed when sprinting
     //public float sprintDuration = 2.5f; // Duration of sprint in seconds
     //public float sprintCooldown = 3f; // Cooldown period for sprint in seconds
-    public float jumpForce = 7f; // Force applied when jumping
-    public float gravity = 20f; // Gravity force
+    public float jumpForce = 3f; // Force applied when jumping
+    public float gravity = 60f; // Gravity force
 
     private CharacterController characterController;
     private Vector3 moveDirection;
@@ -82,37 +82,9 @@ public class PlayerController : MonoBehaviour
         //{
         //cooldownTimer -= Time.deltaTime;
         //}
-        if (Input.GetKey(KeyCode.R)) {
-            room = script.room;
-            if (room == 0) {
-                roomName = "L_00_Tutorial";
-            }
-            if (room == 1) {
-                roomName = "L_01_Intro";
-            }
-            if (room == 2) {
-                roomName = "L_02_bend";
-            }
-            if (room == 3) {
-                roomName = "L_03_fork";
-            }
-            if (room == 4) {
-                roomName = "L_04_square";
-            }
-            if (room == 5) {
-                roomName = "L_05_hole";
-            }
-            if (room == 6) {
-                roomName = "L_06_circle";
-            }
-            if (room == 7) {
-                roomName = "L_07_saws";
-            }
-            if (room == 8) {
-                roomName = "L_08_bowtie";
-            }
-            SceneManager.UnloadSceneAsync(roomName);
-            SceneManager.LoadScene(roomName, LoadSceneMode.Additive);
+        if (Input.GetKey(KeyCode.R)) 
+        {
+            script.Reset();
         }
     }
 

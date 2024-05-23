@@ -147,10 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f34583045fc6e4db0697342f3ee023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  sprintSpeed: 10
-  sprintDuration: 2.5
-  sprintCooldown: 3
   jumpForce: 15
   gravity: 20
 --- !u!1 &5264846280065188078
@@ -163,7 +159,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2670690558916262842}
   - component: {fileID: 2235336609923081267}
-  - component: {fileID: 1137102677565868597}
   - component: {fileID: 6796860480467933131}
   m_Layer: 0
   m_Name: Main Camera
@@ -230,14 +225,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &1137102677565868597
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5264846280065188078}
-  m_Enabled: 1
 --- !u!114 &6796860480467933131
 MonoBehaviour:
   m_ObjectHideFlags: 0
