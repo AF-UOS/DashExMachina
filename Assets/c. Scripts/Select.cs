@@ -50,7 +50,6 @@ public class Select : MonoBehaviour
         {
             roomName = "L_08_bowtie";
         }
-        Debug.Log(roomName);
         SceneManager.LoadScene(roomName, LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("LevelSelect");
     }

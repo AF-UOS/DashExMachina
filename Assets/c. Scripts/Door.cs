@@ -5,21 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    private ValueHandler script;
+    private ButtonCounter script1;
+    private ValueHandler script2;
     int room;
     string roomName;
 
     void Start()
     {
+        GameObject counter = GameObject.Find("Button Counter");
+        script1 = counter.GetComponent<ButtonCounter>();
         GameObject go = GameObject.Find("GameObject");
-        script = go.GetComponent<ValueHandler>();
+        script2 = go.GetComponent<ValueHandler>();
     }
 
     void OnTriggerEnter(Collider c)
     {
-        if (c.gameObject.tag == "Player")
+        if (c.gameObject.tag == "Player" & script1.num == script1.max)
         {
-            room = script.room;
+            room = script2.room;
             if (room == 0)
             {
                 roomName = "L_00_Tutorial";
@@ -57,6 +60,7 @@ public class Door : MonoBehaviour
                 roomName = "L_08_bowtie";
             }
             SceneManager.LoadScene("ClearScene", LoadSceneMode.Additive);
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.UnloadSceneAsync(roomName);
         }
     }

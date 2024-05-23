@@ -12,6 +12,7 @@ public class Camera : MonoBehaviour
     {
         inputx = 0;
         inputx = 0;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
