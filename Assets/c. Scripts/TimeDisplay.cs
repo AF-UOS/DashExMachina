@@ -16,7 +16,7 @@ public class TimeDisplay : MonoBehaviour
         int time = script.time;
         int seconds = script.seconds;
         int minutes = script.minutes;
-        Time.text = minutes.ToString() + ":" + seconds.ToString() + ":" + time.ToString();
+        Time.text = minutes.ToString("00") + ":" + seconds.ToString("00") + ":" + time.ToString("00");
         script.time = 0;
         script.seconds = 0;
         script.minutes = 0;
