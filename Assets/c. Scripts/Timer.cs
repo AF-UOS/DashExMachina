@@ -24,18 +24,19 @@ public class Timer : MonoBehaviour
 
     void FixedUpdate()
     {
-        time += 1;
+        time += 2;
         if (time == 100)
         {
             seconds++;
             time = 0;
         }
-        if (time == 60)
+        if (seconds == 60)
         {
             minutes++;
             seconds = 0;
         }
-        Time.text = minutes.ToString() + ":" + seconds.ToString() + ":" + time.ToString();
+        //Time.text = minutes.ToString() + ":" + seconds.ToString() + ":" + time.ToString();
+        Time.text = minutes.ToString("00") + ":" + seconds.ToString("00") + ":" + time.ToString("00");
         script.Add(time, seconds, minutes);
     }
 }
