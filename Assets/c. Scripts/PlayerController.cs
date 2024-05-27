@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
         //}
         if (Input.GetKey(KeyCode.R)) 
         {
-            script.Reset();
+            script.active = 1;
         }
     }
 

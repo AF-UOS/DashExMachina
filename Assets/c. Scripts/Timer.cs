@@ -35,7 +35,6 @@ public class Timer : MonoBehaviour
             minutes++;
             seconds = 0;
         }
-        //Time.text = minutes.ToString() + ":" + seconds.ToString() + ":" + time.ToString();
         Time.text = minutes.ToString("00") + ":" + seconds.ToString("00") + ":" + time.ToString("00");
         script.Add(time, seconds, minutes);
     }

@@ -18,7 +18,7 @@ public class Hazard : MonoBehaviour
     {
         if (c.gameObject.tag == "Player")
         {
-            script1.Reset();
+            script1.active = 1;
         }
     }
 }
