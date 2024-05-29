@@ -9,6 +9,8 @@ public class Door : MonoBehaviour
     private ValueHandler script2;
     int room;
     string roomName;
+    private ParticleSystem particle;
+    static int active;
 
     void Start()
     {
@@ -16,6 +18,18 @@ public class Door : MonoBehaviour
         script1 = counter.GetComponent<ButtonCounter>();
         GameObject go = GameObject.Find("GameObject");
         script2 = go.GetComponent<ValueHandler>();
+        GameObject door = GameObject.Find("Door");
+        particle = door.GetComponent<ParticleSystem>();
+        active = 0;
+    }
+
+    void Update()
+    {
+        if (script1.num == script1.max & active == 0)
+        {
+            particle.Play();
+            active = 1;
+        }
     }
 
     void OnTriggerEnter(Collider c)
