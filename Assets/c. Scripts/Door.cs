@@ -73,6 +73,10 @@ public class Door : MonoBehaviour
             {
                 roomName = "L_08_bowtie";
             }
+            if (room == 9)
+            {
+                roomName = "L_09_spin";
+            }
             SceneManager.LoadScene("ClearScene", LoadSceneMode.Additive);
             Cursor.lockState = CursorLockMode.None;
             SceneManager.UnloadSceneAsync(roomName);
