@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     //public float sprintDuration = 2.5f; // Duration of sprint in seconds
     //public float sprintCooldown = 3f; // Cooldown period for sprint in seconds
     public float jumpForce = 3f; // Force applied when jumping
-    public float gravity = 60f; // Gravity force
+    public float gravity = 90f; // Gravity force
 
     private CharacterController characterController;
     private Vector3 moveDirection;
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
         //{
         //cooldownTimer -= Time.deltaTime;
         //}
-        if (Input.GetKey(KeyCode.R)) 
+        if (Input.GetKey(KeyCode.R))
         {
             script.active = 1;
         }
