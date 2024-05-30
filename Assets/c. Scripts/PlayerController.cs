@@ -56,7 +56,6 @@ public class PlayerController : MonoBehaviour
             moveDirection.x *= acceleration;
             moveDirection.y *= 20f;
             moveDirection.z *= acceleration;
-            Debug.Log(acceleration);
 
             // Check for jump input
             if (Input.GetKeyDown(KeyCode.Space))

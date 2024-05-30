@@ -77,6 +77,10 @@ public class Door : MonoBehaviour
             {
                 roomName = "L_09_spin";
             }
+            //if (room == 10)
+            //{
+                //roomName = "L_10_spiral";
+            //}
             SceneManager.LoadScene("ClearScene", LoadSceneMode.Additive);
             Cursor.lockState = CursorLockMode.None;
             SceneManager.UnloadSceneAsync(roomName);

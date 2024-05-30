@@ -50,6 +50,10 @@ public class Select : MonoBehaviour
         {
             roomName = "L_08_bowtie";
         }
+        else if (room == 9)
+        {
+            roomName = "L_09_spin";
+        }
         SceneManager.LoadScene(roomName, LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync("LevelSelect");
     }

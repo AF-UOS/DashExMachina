@@ -24,37 +24,41 @@ public class Replay : MonoBehaviour
             {
                 roomName = "L_00_Tutorial";
             }
-            if (room == 1)
+            else if (room == 1)
             {
                 roomName = "L_01_Intro";
             }
-            if (room == 2)
+            else if (room == 2)
             {
                 roomName = "L_02_bend";
             }
-            if (room == 3)
+            else if (room == 3)
             {
                 roomName = "L_03_fork";
             }
-            if (room == 4)
+            else if (room == 4)
             {
                 roomName = "L_04_square";
             }
-            if (room == 5)
+            else if (room == 5)
             {
                 roomName = "L_05_hole";
             }
-            if (room == 6)
+            else if (room == 6)
             {
                 roomName = "L_06_circle";
             }
-            if (room == 7)
+            else if (room == 7)
             {
                 roomName = "L_07_saws";
             }
-            if (room == 8)
+            else if (room == 8)
             {
                 roomName = "L_08_bowtie";
+            }
+            else if (room == 9)
+            {
+                roomName = "L_09_spin";
             }
             SceneManager.LoadScene(roomName, LoadSceneMode.Additive);
             SceneManager.UnloadSceneAsync("ClearScene");

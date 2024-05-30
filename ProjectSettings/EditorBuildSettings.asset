@@ -44,4 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/a. Scenes/Levels/L_08_bowtie.unity
     guid: b449dc3a42dbf524fa26158584aad496
+  - enabled: 1
+    path: Assets/a. Scenes/Levels/L_09_spin.unity
+    guid: 9ba009e4fad4e1845962a17400e0ed15
+  - enabled: 1
+    path: Assets/a. Scenes/Levels/L_10_spiral.unity
+    guid: d1a3ed6f077dd384bb61c83e3709b28d
   m_configObjects: {}

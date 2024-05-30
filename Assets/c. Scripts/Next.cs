@@ -53,9 +53,18 @@ public class Next : MonoBehaviour
             }
             if (room == 8)
             {
+                newRoom = "L_09_spin";
+            }
+            if (room == 9)
+            {
                 newRoom = "TitleScene";
                 script.room = -1;
             }
+            //else if (room == 10)
+            //{
+                //newRoom = "TitleScene";
+                //script.room = -1;
+            //}
             SceneManager.LoadScene(newRoom, LoadSceneMode.Additive);
             script.room += 1;
             SceneManager.UnloadSceneAsync("ClearScene");
@@ -73,35 +82,43 @@ public class Next : MonoBehaviour
         {
             newRoom = "L_02_bend";
         }
-        if (room == 2)
+        else if (room == 2)
         {
             newRoom = "L_03_fork";
         }
-        if (room == 3)
+        else if (room == 3)
         {
             newRoom = "L_04_square";
         }
-        if (room == 4)
+        else if (room == 4)
         {
             newRoom = "L_05_hole";
         }
-        if (room == 5)
+        else if (room == 5)
         {
             newRoom = "L_06_circle";
         }
-        if (room == 6)
+        else if (room == 6)
         {
             newRoom = "L_07_saws";
         }
-        if (room == 7)
+        else if (room == 7)
         {
             newRoom = "L_08_bowtie";
         }
-        if (room == 8)
+        else if (room == 8)
         {
+            newRoom = "L_09_spin";
+        }
+        if (room == 9) {
             newRoom = "TitleScene";
             script.room = -1;
         }
+        //else if (room == 10)
+        //{
+        //newRoom = "TitleScene";
+        //script.room = -1;
+        //}
         SceneManager.LoadScene(newRoom, LoadSceneMode.Additive);
         script.room += 1;
         SceneManager.UnloadSceneAsync("ClearScene");
