@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private ValueHandler script;
     int room;
     string roomName;
+    float acceleration;
 
     void Start()
     {
@@ -44,7 +45,18 @@ public class PlayerController : MonoBehaviour
 
             // Apply speed based on whether sprinting or not
             //float currentSpeed = isSprinting ? sprintSpeed : speed;
-            moveDirection *= 20f;
+            if (Input.GetAxis("Horizontal") == 0 & Input.GetAxis("Vertical") == 0)
+            {
+                acceleration = 10f;
+            }
+            else if ( acceleration < 30f)
+            {
+                acceleration += Time.deltaTime * 10f;
+            }
+            moveDirection.x *= acceleration;
+            moveDirection.y *= 20f;
+            moveDirection.z *= acceleration;
+            Debug.Log(acceleration);
 
             // Check for jump input
             if (Input.GetKeyDown(KeyCode.Space))
